@@ -1,4 +1,4 @@
-alert("JS connected!");
+alert("WELCOME!");
 let ball = document.querySelector(".ball");
 let board = document.querySelector(".board");
 let boardBounds = board.getBoundingClientRect();
