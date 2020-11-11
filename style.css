@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, rgb(214, 75, 11), rgb(211, 43, 14));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    height: 85vh;
+    width: 85%;
+    border-radius: 10px;
+    background-color: black;
+
+}
+.ball {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgb(214, 39, 68);
+    position: fixed;
+    top: 45vh;
+    left: 42vh;
+}
+
+.paddle {
+    height: 120px;
+    width: 15px;
+    background-color: rgb(214, 39, 68);
+    position: fixed;
+    border-radius: 5px;
+}
+
+.left {
+    top: 40vh;
+    left: 8%;
+}
+
+.right {
+    top: 40vh;
+    right: 8%;
+}
