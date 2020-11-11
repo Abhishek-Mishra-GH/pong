@@ -51,8 +51,21 @@ function moveBall() {
       if(ballLeft <= boardBounds.left || ballRight >= boardBounds.right) {
             x = !x;
       }
-    ball.style.top = y == true? ballTop+3+"px": ballTop-3+"px";
-    ball.style.left = x == true? ballLeft+3+"px" : ballLeft-3+"px";
+
+      let leftPaddleBounds = leftPaddle.getBoundingClientRect();
+      let rightPaddleBounds = rightPaddle.getBoundingClientRect();
+
+      if(ballLeft <= leftPaddleBounds.right && ballTop+40 >= leftPaddleBounds.top && ballBottom-40 <= leftPaddleBounds.bottom) {
+             x = !x;
+      }
+
+      if(ballRight >= rightPaddleBounds.left && ballTop+40 >= rightPaddleBounds.top && ballBottom-40 <= rightPaddleBounds.bottom) {
+            x = !x;
+      }
+   
+
+    ball.style.top = y == true? ballTop+4+"px": ballTop-4+"px";
+    ball.style.left = x == true? ballLeft+4+"px" : ballLeft-4+"px";
     requestAnimationFrame(moveBall);
  }
 
